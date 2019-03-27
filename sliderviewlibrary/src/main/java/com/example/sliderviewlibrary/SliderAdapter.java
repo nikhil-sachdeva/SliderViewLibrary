@@ -3,6 +3,7 @@ package com.example.sliderviewlibrary;
 import android.content.Context;
 import android.os.Handler;
 import android.os.Parcelable;
+import android.support.design.widget.TabLayout;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
@@ -24,13 +25,14 @@ public class SliderAdapter extends PagerAdapter {
     TimerTask updatePage;
     int currentPage=0;
     int mode=0;
+    TabLayout tabDots;
     ViewPager viewPager;
 
-    public SliderAdapter(Context context, ViewPager viewPager) {
+    public SliderAdapter(Context context, ViewPager viewPager, TabLayout tabDots) {
         this.context = context;
         inflater = LayoutInflater.from(context);
-      this.viewPager=viewPager;
-
+        this.viewPager=viewPager;
+        this.tabDots=tabDots;
     }
 
     @Override
@@ -84,31 +86,15 @@ public class SliderAdapter extends PagerAdapter {
         return null;
     }
 
-    void setImages(ArrayList<Integer> IMAGES){
+    public void setImages(ArrayList<Integer> IMAGES){
         this.IMAGES=IMAGES;
     }
 
-    void setUrls(ArrayList<String> URLs){
+    public void setUrls(ArrayList<String> URLs){
         this.URLs=URLs;
         mode=1;
     }
 
-    TimerTask getTimerTask(){
-        final Handler handler = new Handler();
-        final Runnable Update = new Runnable() {
-            public void run() {
-                if (currentPage == 3) {
-                    currentPage = 0;
-                }
-                viewPager.setCurrentItem(currentPage++, true);
-            }
-        };
-        updatePage=new TimerTask() {
-            @Override
-            public void run() {
-                handler.post(Update);
-            }
-        };
-        return updatePage;
-    }
+
+
 }

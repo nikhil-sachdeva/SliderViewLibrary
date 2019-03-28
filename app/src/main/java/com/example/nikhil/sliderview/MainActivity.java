@@ -16,7 +16,7 @@ import java.util.TimerTask;
 
 public class MainActivity extends AppCompatActivity {
 ViewPager viewPager;
-ArrayList<Integer> images = new ArrayList<>();
+    ArrayList<Integer> images = new ArrayList<>();
     ArrayList<String> Urls = new ArrayList<>();
     SliderView sliderView;
     int DELAY_MS=1000,PERIOD_MS=1000;
@@ -27,15 +27,15 @@ int currentPage=0;
         setContentView(R.layout.activity_main);
         sliderView=findViewById(R.id.sliderView);
         //SliderAdapter sliderAdapter = new SliderAdapter(getApplicationContext(),viewPager);
-        images.add(R.drawable.alt);
-        images.add(R.drawable.amat);
-        images.add(R.drawable.college);
+        images.add(R.drawable.pic1);
+        images.add(R.drawable.pic2);
+        images.add(R.drawable.pic3);
 
 
         Urls.add("https://cdn140.picsart.com/257737415006202.jpg?c256x256");
         Urls.add("https://stephanianforum.files.wordpress.com/2015/07/holi-celbration.jpg?w=256&h=256&crop=1");
         Urls.add("https://static-s.aa-cdn.net/img/ios/1175689019/5f18f297b9258db5c13af41d70309379?v=1");
-        sliderView.setUrls(Urls);
+        sliderView.setImages(images);
         //OR
         //sliderView.setImages(IMAGES);
         TimerTask task = sliderView.getTimerTask();

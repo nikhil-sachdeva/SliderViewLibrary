@@ -5,6 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 <com.example.sliderviewlibrary.SliderView
     android:id="@+id/sliderView"
-    android:layout_width="100dp"
-    android:layout_height="100dp"/>
+    android:layout_centerHorizontal="true"
+    android:layout_width="300dp"
+    android:layout_height="200dp"/>
 </RelativeLayout>

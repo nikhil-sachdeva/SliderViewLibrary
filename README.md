@@ -1,7 +1,7 @@
 # SliderViewLibrary
 An easy to use Android Library to get slides in apps using images or image URLs
-
-### Tutorial to implement SliderView from scratch [here](https://mostly-dumb.github.io/sliderview-android/)
+## Medium Article to implement SliderView from scratch. [Link](https://medium.com/@nikhilsachdeva57/implementing-slide-shows-in-android-apps-e1acca53953a)
+### Also [here](https://mostly-dumb.github.io/sliderview-android/)
 
 ## Gradle
 Step 1. Add this in your root build.gradle at the end of repositories:

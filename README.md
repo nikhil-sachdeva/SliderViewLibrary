@@ -1,4 +1,5 @@
 # SliderViewLibrary
+[![Android Arsenal]( https://img.shields.io/badge/Android%20Arsenal-SliderView%20library-green.svg?style=flat )]( https://android-arsenal.com/details/1/7621 ) <br>
 An easy to use Android Library to get slides in apps using images or image URLs
 ## Medium Article to implement SliderView from scratch. [Link](https://medium.com/@nikhilsachdeva57/implementing-slide-shows-in-android-apps-e1acca53953a)
 ### Also [here](https://mostly-dumb.github.io/sliderview-android/)
